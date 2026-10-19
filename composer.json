@@ -1,7 +1,7 @@
 {
-  "name": "gsu-d2l/datahub-schema",
+  "name": "gsu-cetloe/d2l-datahub-schema",
   "license": "MIT",
-  "homepage": "https://github.com/gsu-d2l",
+  "homepage": "https://github.com/GSU-CETLOE/d2l-datahub-schema",
   "require": {
     "php": "^8.1",
     "ext-dom": "*",

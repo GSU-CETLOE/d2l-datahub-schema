@@ -1,1 +1,1 @@
-# gsu-d2l/datahub-schema
+# gsu-cetloe/d2l-datahub-schema
