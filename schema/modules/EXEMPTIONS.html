@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Activity Exemptions Log</h2>
+            <p>The Activity Exemptions Log Brightspace Data Set returns details on the exemptions a user has created for your organization units.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Type and Column Size</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Type and Column Size</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.6</td>
+                  <td>ObjectId</td>
+                  <td>Unique identifier of the object with an exemption. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.6</td>
+                  <td>ActivityId</td>
+                  <td>Unique identifier for an activity associated with the exemption</td>
+                  <td>varchar</td>
+                  <td>225</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.6</td>
+                  <td>LogTypeName</td>
+                  <td>Name of log type. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.6</td>
+                  <td>LastModifiedUtc</td>
+                  <td>Time of the last log entry (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Type and Column Size</td>
+                  <td>LastModifiedBy</td>
+                  <td>User ID of user who last modified the exemption. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.6</td>
+                  <td>ActivityExemptionsLogId</td>
+                  <td>Unique exemptions log identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>4.7 / 5.1 - Updated description</td>
+                  <td>ToolId</td>
+                  <td>Unique identifier for the tool with an exemption</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

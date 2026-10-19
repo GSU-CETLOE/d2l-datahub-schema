@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Role Details</h2>
+            <p>The Role Details Brightspace Data Set returns a full set of attributes for each role in your organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.1</td>
+                  <td>RoleId</td>
+                  <td>Unique role identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated size</td>
+                  <td>RoleName</td>
+                  <td>Name of the role.</td>
+                  <td>nvarchar</td>
+                  <td>120</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated size</td>
+                  <td>Description</td>
+                  <td>Description of the role. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>400</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>IsCascading</td>
+                  <td>Attribute indicating that the role cascades from other roles.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>InClassList</td>
+                  <td>Attribute indicating that users with this role appear in class lists.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated size</td>
+                  <td>ClassListRoleName</td>
+                  <td>Attribute indicating the role name for users that appear in class lists. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>120</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ClassListShowGroups</td>
+                  <td>Attribute indicating that members of this role can see groups consisting of learners in the class list.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ClassListShowSections</td>
+                  <td>Attribute indicating that members of this role can see sections consisting of learners in the class list.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ClassListDisplayRole</td>
+                  <td>Attribute indicating that members of this role appear in the class list with the role displayed.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>AccessInactiveCO</td>
+                  <td>Attribute indicating that the role can access inactive course offerings.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>HasSpecialAccess</td>
+                  <td>Attribute indicating that the role has special access to courses.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Field</td>
+                  <td>AddToCourseOfferingGroups</td>
+                  <td>Attribute indicating that the role appears in the course offering group.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>CanBeAutoEnrolledIntoGroups</td>
+                  <td>Attribute indicating that the role can be automatically enrolled into groups in a class.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>AddToCourseOfferingSections</td>
+                  <td>Attribute indicating that users with this role can be added to course offering sections.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>CanBeAutoEnrolledIntoSections</td>
+                  <td>Attribute indicating that users with this role can be automatically enrolled into course sections.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>AccessPastCourses</td>
+                  <td>Attribute indicating that this role can access past courses.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>AccessFutureCourses</td>
+                  <td>Attribute indicating that this role can access courses that have not yet started.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>SortOrder</td>
+                  <td>Indicates the sort order for users with this role.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInContent</td>
+                  <td>Indicates that this role should appear in Content.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInDiscussionAssess</td>
+                  <td>Indicates that this role should appear in Discussions assessments.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInDiscussionStats</td>
+                  <td>Indicates that this role should appear in Discussions statistics.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInGrades</td>
+                  <td>Indicates that this role should appear in Grades.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInAttendance</td>
+                  <td>Indicates that this role should appear in Attendance.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>AllowSelfEnrollInGroups</td>
+                  <td>Indicates that this role should have permission to self-enroll in groups.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInRegistration</td>
+                  <td>Indicates that this role should appear in registration information for a course.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.1</td>
+                  <td>ShowInUserProgress</td>
+                  <td>Indicates that this role should appear in User Progress.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated size</td>
+                  <td>RoleAlias</td>
+                  <td>Indicates the alias for this role. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>120</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Updated size</td>
+                  <td>RoleCode</td>
+                  <td>Code assigned to each role for mapping to other systems or organizations. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>100</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date and time when the role was last modified (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>DeletedBy</td>
+                  <td>User identifier of the user that deleted the role. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

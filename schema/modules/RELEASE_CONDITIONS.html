@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>PreRequisite Conditions Met</h2>
+            <p>The PreRequisite Conditions Met Brightspace Data Set returns all the prerequisite conditions that have been met for applicable users in the organization. The PreRequisite Conditions Met Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5.7 / 6.0 - Updated key</td>
+                  <td>PreRequisiteId</td>
+                  <td>Unique prerequisite identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated key</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>DateMet</td>
+                  <td>Date the prerequisite condition was met (UTC). Field can be null</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.11 / 9.0</td>
+                  <td>Action</td>
+                  <td>The action that occurred: Met or Deleted.</td>
+                  <td>nvarchar</td>
+                  <td>7</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.11 / 9.0</td>
+                  <td>LastModified</td>
+                  <td>The date and time when the condition was Met or Deleted. For Met conditions, this matches the DateMet column.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Release Condition Objects</h2>
+            <p>The Release Condition Objects Brightspace Data Set returns all the release conditions (prerequisites and results) that have been created in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>PreRequisiteId</td>
+                  <td>Unique pre-requisite identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>ResultId</td>
+                  <td>Unique result identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique organization identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Name</td>
+                  <td>Pre-requisite condition name.</td>
+                  <td>varchar</td>
+                  <td>64</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>IsNegativeCondition</td>
+                  <td>Indicates if the condition relies on something not happening.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.5 - Corrected Field name</td>
+                  <td>PreRequisiteToolId</td>
+                  <td>Unique pre-requisite tool identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Removed FK</td>
+                  <td>Id1</td>
+                  <td>Unique identifier for the pre-requisite tool. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Removed FK</td>
+                  <td>Id2</td>
+                  <td>Secondary unique identifier for the pre-requisite tool when needed. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>ResultToolId</td>
+                  <td>Unique identifier for the result tool.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>UsesPercentage</td>
+                  <td>Indicates if the pre-requisite is looking at a grade percentage.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>OperatorTypeDesc</td>
+                  <td>Defines where all or any of the pre-requisites need to be met. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>Guid1</td>
+                  <td>Unique identifier for the pre-requisite tool. For a release condition object based on Outcomes, value will match the ObjectId of the Outcome.Field can be null</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>Guid2</td>
+                  <td>Unique identifier for the pre-requisite tool. For a release condition object based on Outcomes, value will match the ScaleLevelId of the Outcome.Field can be null.</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Release Condition Results</h2>
+            <p>The Release Condition Results Brightspace Data Set returns all the release condition results and whether they have been met for applicable users in the organization. These are the resulting actions that occur when pre-requisites are met.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>ResultId</td>
+                  <td>Unique result identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Met</td>
+                  <td>Indicates whether the result has been met or not met by the user.</td>
+                  <td>varchar</td>
+                  <td>7</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.7 / 4.2</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

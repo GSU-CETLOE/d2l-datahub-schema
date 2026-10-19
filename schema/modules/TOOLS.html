@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Tools</h2>
+            <p>The Tools Brightspace Data Set retrieves the data on all the tools that exist in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.8 / 4.3</td>
+                  <td>ToolId</td>
+                  <td>Unique identifier for the tool</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Name</td>
+                  <td>Unique tool name</td>
+                  <td>nvarchar</td>
+                  <td>50</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.18 / 8.4 - Updated column size</td>
+                  <td>DisplayName</td>
+                  <td>Display name of the tool</td>
+                  <td>nvarchar</td>
+                  <td>200</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.8 / 4.3</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

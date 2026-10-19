@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Announcements</h2>
+            <p>The Announcements Brightspace Data Set returns details on the announcements a user has created for your org units.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnnouncementId</td>
+                  <td>Unique announcement identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Title</td>
+                  <td>Announcement title</td>
+                  <td>nvarchar</td>
+                  <td>400</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>StartDate</td>
+                  <td>First time the announcement is visible (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>EndDate</td>
+                  <td>Last date the announcement is visible (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsGlobal</td>
+                  <td>If new items are visible across orgs</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsDraft</td>
+                  <td>If in draft, then the announcement has not been published yet</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>NumAttachments</td>
+                  <td>Number of attachments</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DeletedDate</td>
+                  <td>Date the announcement was deleted (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DeletedByUserId</td>
+                  <td>Deleted by user ID. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>LastModified</td>
+                  <td>Last modified date/time (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.7 / 5.1</td>
+                  <td>LastModifiedBy</td>
+                  <td>User who last modified the announcement. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.7 / 5.1</td>
+                  <td>CreatedBy</td>
+                  <td>User who created the announcement. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.7 / 5.1</td>
+                  <td>IsAuthorInfoShown</td>
+                  <td>If author information is displayed.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.7 / 5.1</td>
+                  <td>CreatedDate</td>
+                  <td>Date the announcement was created (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0</td>
+                  <td>ResultId</td>
+                  <td>Unique release condition result identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

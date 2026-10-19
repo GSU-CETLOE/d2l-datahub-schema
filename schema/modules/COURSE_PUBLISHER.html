@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Course Publisher Launches</h2>
+            <p>The Course Publisher Launches Brightspace Data Set returns details about course packages launched from the Course Publisher tool.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>LaunchId</td>
+                  <td>Unique course package launch identifier</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>int</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RecipientId</td>
+                  <td>Unique recipient identifier</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier</td>
+                  <td>int</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>RoleId</td>
+                  <td>Unique role identifier</td>
+                  <td>int</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LaunchMethod</td>
+                  <td>Method for launching the course package</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>ExternalUserId</td>
+                  <td>Unique external user identifier</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>ExternalLMSType</td>
+                  <td>External LMS type used by the recipient</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>IsNewUser</td>
+                  <td>If the external user is new</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModified</td>
+                  <td>Date the course package was last modified (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Course Publisher Recipients</h2>
+            <p>The Course Publisher Recipients Brightspace Data Set returns details about course package recipients in the Course Publisher tool.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6.8</td>
+                  <td>RecipientID</td>
+                  <td>Unique recipient identifier</td>
+                  <td>uniqueidentifier</td>
+                  <td>16</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>Name</td>
+                  <td>Recipient name</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>CreatedAt</td>
+                  <td>Date the recipient was created (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.8</td>
+                  <td>LastModified</td>
+                  <td>Date the recipient was last modified (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Course Copy Logs</h2>
+            <p>The Course Copy Logs Brightspace Data Set returns a list of course copy jobs. Deleted jobs are included.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>SourceOrgUnitId</td>
+                  <td>Unique source org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DestinationOrgUnitId</td>
+                  <td>Unique destination org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Status</td>
+                  <td>Status of copy</td>
+                  <td>varchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>StartDate</td>
+                  <td>Start date time (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>EndDate</td>
+                  <td>End date time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsDestinationNew</td>
+                  <td>Is the copy destination new</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>CopyProtectedResources</td>
+                  <td>Copy protected resources</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>CopyCourseJobId</td>
+                  <td>Unique copy course job identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,3207 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>All Grades</h2>
+            <p>The All Grades data set returns one row for each gradable item for each learner in each course offering. Note: Course offerings must be the direct or indirect children of a specific org unit. For example, you can export all grade items for: Required Permission Advanced Data Sets &gt; Can execute All Grades (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>User Id</td>
+                  <td>D2L&#039;s unique identifier for the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Defined Id</td>
+                  <td>User&#039;s Org Defined Id (often the learner identifier from an SIS system). Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Username</td>
+                  <td>User&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>First Name</td>
+                  <td>User&#039;s first name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Name</td>
+                  <td>User&#039;s last name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Is Active</td>
+                  <td>Learner&#039;s status.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Id</td>
+                  <td>User&#039;s role Id at the specific course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Name</td>
+                  <td>User&#039;s role at the specific course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Id</td>
+                  <td>D2L&#039;s unique identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Code</td>
+                  <td>Often the course identifier from an SIS system. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Section Id</td>
+                  <td>D2L&#039;s unique identifier for the section. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Section Code</td>
+                  <td>Client defined code for the section. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Section Name</td>
+                  <td>Name of the section. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item Category Id</td>
+                  <td>D2L&#039;s unique identifier for the category in which the grade item belongs. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item Category Name</td>
+                  <td>Name of the category in which the grade item belongs. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item Id</td>
+                  <td>D2L&#039;s unique identifier for a grade item. Note: The final calculated grade and final adjusted grades will be included.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item Name</td>
+                  <td>Name of the grade item.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item Weight</td>
+                  <td>Weight of the grade item. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item Start Date</td>
+                  <td>Date the grade item will become visible in the grade book. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Item End Date</td>
+                  <td>Date the grade item will become invisible in the grade book. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Points Numerator</td>
+                  <td>Numerator of the grade value. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Points Denominator</td>
+                  <td>Denominator of the grade value. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Value</td>
+                  <td>Value of the grade with the grade scheme applied. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Last Modified</td>
+                  <td>Date that the grade was last modified. Note: This is a UTC formatted date/time stamp in accordance with the org&#039;s local time zone.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grade Comments</td>
+                  <td>Comments/feedback left for the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grader User Id</td>
+                  <td>User Id of the last user that modified the grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grader Org Defined Id</td>
+                  <td>Org Defined Id of the last user that modified the grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grader Username</td>
+                  <td>Grader&#039;s username. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grader First Name</td>
+                  <td>First name of the last user that modified the grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Grader Last Name</td>
+                  <td>Last name of the last user that modified the grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Exclude From Final Grade</td>
+                  <td>Whether this grade value is not used in the final grade calculation.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Grade Object Type</td>
+                  <td>Grade object type name. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Attendance</h2>
+            <p>Returns attendance results from the Attendance tool for each user in a selection of org units. Required Permission Advanced Data Sets &gt; Can execute Attendance (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>User Id</td>
+                  <td>D2L&#039;s unique identifier for the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Org Defined Id</td>
+                  <td>User&#039;s Org Defined Id (often the learner identifier from an SIS system).</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Username</td>
+                  <td>User&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>First Name</td>
+                  <td>User&#039;s first name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Last Name</td>
+                  <td>User&#039;s last name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Role Name</td>
+                  <td>User&#039;s role in the specific course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Role Id</td>
+                  <td>User&#039;s role Id in the specific course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Attendance Register Id</td>
+                  <td>Unique attendance register identifier.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Attendance Register Name</td>
+                  <td>The name given to the register.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Attendance Session Id</td>
+                  <td>Unique identifier for the session.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Attendance Session Name</td>
+                  <td>The given name of the session.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Scheme Symbol Id</td>
+                  <td>Unique scheme symbol identifier.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Symbol Name</td>
+                  <td>The name given to the symbol.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Symbol Value</td>
+                  <td>The value used for the symbol.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Percentage</td>
+                  <td>The score as a percentage that contributes towards the attendance score when a symbol is given. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Last Modified</td>
+                  <td>Date the symbol for the user in the session was last modified (UTC). Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Course Offering Id</td>
+                  <td>D2L&#039;s unique identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Course Offering Code</td>
+                  <td>Often the course identifier from an SIS system.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Course Section Id</td>
+                  <td>D2L&#039;s unique identifier for the section.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Course Section Code</td>
+                  <td>Client defined code for the section.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Course Section Name</td>
+                  <td>Name of the section.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Parent Department Name</td>
+                  <td>Name of the department the course offering is under.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.2</td>
+                  <td>Semester Name</td>
+                  <td>Name of the semester the course offering is under.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Awards Issued</h2>
+            <p>Awards Issued data set returns all awards that have been issued and their details for all users over a date range. Required Permission Advanced Data Sets &gt; Can execute Awards Issued (Organization level) Custom Reporting Framework &gt; Can See DataHub (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>AwardId</td>
+                  <td>Identifier of the award</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>Name</td>
+                  <td>Name of the award in Brightspace.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>Type</td>
+                  <td>Type of award: certificate or badge.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>Credits</td>
+                  <td>The number of credits associated with the award. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>UserId</td>
+                  <td>The identifier of the of the award recipient.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>UserName</td>
+                  <td>The username of the of the award recipient.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>FirstName</td>
+                  <td>The first name of the award recipient.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>LastName</td>
+                  <td>The last name of the of the award recipient.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>OrgDefinedId</td>
+                  <td>The organization-defined identifier to which this award is associated for the award recipient.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>IssuedBy</td>
+                  <td>The identifier of the user who issued the award.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>IssuerUserName</td>
+                  <td>The user name of the user who issued the award.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>IssuerFirstName</td>
+                  <td>The first name of the user who issued the award.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>IssuerLastName</td>
+                  <td>The last name of the user who issued the award.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>IssueDate</td>
+                  <td>The date when the award was issued.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>RevokedId</td>
+                  <td>Indicates if the award has been revoked. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>Criteria</td>
+                  <td>Indicates the criteria that must be met to earn the award. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>Evidence</td>
+                  <td>Displays the evidence that the criteria for the award was met. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>ExpiryDate</td>
+                  <td>Indicates the date when the award expires Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>OrgUnitId</td>
+                  <td>The organization unit identifier for the org in which the award was issued.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>OrgUnitName</td>
+                  <td>The organization unit name for the org in which the award was issued.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.19.4</td>
+                  <td>OrgUnitCode</td>
+                  <td>The organization unit code for the org in which the award was issued.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Content Progress</h2>
+            <p>Content Progress provides insight on the content viewed by users in a selection of org units during a specified date range. Only active users are included in this report. This advanced data set is intended to replace the corresponding standard data exports so that all analytics reside in a single tool. Required Permission Advanced Data Sets &gt; Can execute Content Progress (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Course Offering ID</td>
+                  <td>D2L&#039;s unique identifier for the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Course Offering Code</td>
+                  <td>Often the course identifier from an SIS system. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Course Section ID</td>
+                  <td>D2L&#039;s unique identifier for the section. May contain a list if there are multiple sections. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Course Section Code</td>
+                  <td>Client defined code for the section. May contain a list if there are multiple sections. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Course Section Name</td>
+                  <td>Name of the section. May contain a list if there are multiple sections. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Semester ID</td>
+                  <td>Unique identifier for the Semester that the course offering belongs to. May contain a list if there are multiple sections. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Semester Code</td>
+                  <td>Unique code for the semester that the course offering belongs to. May contain a list if there are multiple sections. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Semester Name</td>
+                  <td>Semester that the course offering belongs to. May contain a list if there are multiple sections. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>User ID</td>
+                  <td>D2L&#039;s unique identifier for the user. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>User Name</td>
+                  <td>User&#039;s username. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Org Defined ID</td>
+                  <td>User&#039;s Org Defined Id (often the learner identifier from an SIS system).</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>First Name</td>
+                  <td>User&#039;s first name. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Last Name</td>
+                  <td>User&#039;s last name. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Role ID</td>
+                  <td>User&#039;s role Id at the specific course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Role Name</td>
+                  <td>User&#039;s role at the specific course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Content Topic ID</td>
+                  <td>D2L&#039;s unique identifier for the content topic. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Content Topic Name</td>
+                  <td>Name of the content topic. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Module ID</td>
+                  <td>Unique identifier of the module. This only displays output from the direct parent. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Module Name</td>
+                  <td>Name of the module. This only displays output from the direct parent Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Content Topic Visits</td>
+                  <td>Number of visits the user made to topics in the org. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Total Time Spent</td>
+                  <td>Time in seconds the user spent in the topics in the org. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.11</td>
+                  <td>Last Visited Date</td>
+                  <td>Last date/time a user accessed the course content.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Course Learning Outcome Evaluation</h2>
+            <p>The Course Learning Outcome Evaluation (CLOE) data set returns the learner&#039;s outcomes for required competencies. Data comes from the Competencies tool, not the Learning Outcomes tool. Required Config Variable d2l.Tools.AdvancedDataSets.ProgramOrgUnitTypeId (set the org unit type ID that represents a program for an org) Required Permission Advanced Data Sets &gt; Can execute CLOE (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Program Enrollment</td>
+                  <td>Ancestor of the course template defined in columns (Org Unit ID, Org Unit Name, and Org Unit Code). Where multiple ancestors exist, all ancestors are displayed in the field, using &#039;|&quot; as a delimiter. The Org Unit Type to use as the parent is defined as a configuration variable.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Id</td>
+                  <td>Org unit ID used to collect learning outcomes.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Name</td>
+                  <td>Name of the course template used to collect results.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Code</td>
+                  <td>Code of the course template used to collect results.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Type Id</td>
+                  <td>ID of the course template.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Type Name</td>
+                  <td>&quot;Course Template&quot;.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Outcome Id</td>
+                  <td>ID of the learning objective in the course template.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Outcome Type</td>
+                  <td>Learning objective.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Outcome Name</td>
+                  <td>Name of the learning objective.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Ready For Evaluation</td>
+                  <td>Possible status&#039; for learning objectives:</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Id</td>
+                  <td>OU ID for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Code</td>
+                  <td>Code for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Name</td>
+                  <td>Semester that the course offering belongs to. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>First Name</td>
+                  <td>First name of the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Name</td>
+                  <td>Last name of the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Username</td>
+                  <td>Learner&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Defined Id</td>
+                  <td>Learner&#039;s org defined ID. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>User Id</td>
+                  <td>Learner&#039;s unique numeric D2L ID.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Name</td>
+                  <td>Role name of the learner in the specified org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Id</td>
+                  <td>D2L ID of the learner&#039;s role in the specified org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Id</td>
+                  <td>ID of the activity that the outcome is attached to.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Type</td>
+                  <td>Type of activity that the outcome is attached to:</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Name</td>
+                  <td>Name of the activity, for example, content topic name, dropbox name, quiz name, or quiz question name. Note: If the activity is a quiz question, then the quiz name must be included too.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Assessment Type</td>
+                  <td>Numeric or Rubric (or blank if it is not assessed) Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Rubric Id</td>
+                  <td>If the outcome is assessed by a rubric, this is the rubric ID. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Rubric Name</td>
+                  <td>If the outcome is assessed by a rubric, this is the rubric name. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Rubric Measurement</td>
+                  <td>If the outcome is assessed by a rubric, this contains Overall Score or the specific rubric criterion used to measure the outcome. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Assessment Threshold</td>
+                  <td>If assessed, contains the threshold considered to be successful attainment. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Assessment Threshold Criteria</td>
+                  <td>For numeric assessments, this field contains one of the following operators associated with the threshold: Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Rubric Level Achieved</td>
+                  <td>If the activity is assessed by a rubric, this is the level that the learner achieved. If the rubric measurement is Overall Score, this is the learner&#039;s overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Rubric Points</td>
+                  <td>If the activity is assessed by a rubric, this is the point score that the learner achieved. If the rubric measurement is Overall Score, this is the learner&#039;s overall score on the rubric. If the Rubric Measurement is a specific criterion, this is how the learner performed on that criterion. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Grade Points</td>
+                  <td>Achieved points value the learner received when the activity is assessed by Grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Grade Max Points</td>
+                  <td>Total possible points the learner could receive for the activity when the activity is assessed by Grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Grade Percent</td>
+                  <td>Activity grade as recorded in the grade book. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Activity Threshold Achieved</td>
+                  <td>If this outcome is assessed, it is a comparison of the assessment threshold to the learner results. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Course Offering Enrollments</h2>
+            <p>Returns the course offerings within which a user is enrolled, including both explicit and implicit enrollments. Required Permission Advanced Data Sets &gt; Can Execute Course Offering Enrollments (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.21.1</td>
+                  <td>User Id</td>
+                  <td>Internal numeric user identifier within Brightspace.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.1</td>
+                  <td>Org Unit Id</td>
+                  <td>Unique org unit identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.1</td>
+                  <td>Role Id</td>
+                  <td>The learner&#039;s numeric role Id within the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.1</td>
+                  <td>Enrollment Date</td>
+                  <td>The date of the learner&#039;s enrollment.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.1</td>
+                  <td>Enrollment Type</td>
+                  <td>The type of enrollment. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>CPD Job Targets</h2>
+            <p>Returns... This Advanced Data Set only appears in Data Hub for new customers who have purchased the Continuous Professional Development Tool as part of the D2L for Associations Package. Required Permission (...)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>JobTitle</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>StartDate</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>SubjectId</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>SubjectName</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>StructuredMinutes</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>UnstructuredMinutes</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>StructuredRecordCount</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>UnstructuredRecordCount</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>CPD Records</h2>
+            <p>Returns... This Advanced Data Set only appears in Data Hub for new customers who have purchased the Continuous Professional Development Tool as part of the D2L for Associations Package. Required Permission (...)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>UserId</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>RecordId</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>RecordName</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Credits (in minutes)</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Date Completed</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Subject</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Type</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Method</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Grade</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Evidence</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>Answer(1...N)</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>State</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>CPD User Targets</h2>
+            <p>Returns... This Advanced Data Set only appears in Data Hub for new customers who have purchased the Continuous Professional Development Tool as part of the D2L for Associations Package. Required Permission (...)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>UserId</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>StartDate</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>SubjectId</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>SubjectName</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>StructuredMinutes</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>UnstructuredMinutes</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>StructuredRecordCount</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.24.6</td>
+                  <td>UnstructuredRecordCount</td>
+                  <td></td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Enrollments and Withdrawals</h2>
+            <p>Returns explicit enrollment status for all users in an org unit. Required Permission Advanced Data Sets &gt; Can Execute Enrollments And Withdrawals (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Log Id</td>
+                  <td>Log entry&#039;s unique identification number.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Id</td>
+                  <td>Org unit&#039;s unique identification number.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Name</td>
+                  <td>Name of the org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Code</td>
+                  <td>Code of the org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Unit Type</td>
+                  <td>Type of org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>User Id</td>
+                  <td>User&#039;s unique numeric D2L ID.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>First Name</td>
+                  <td>User&#039;s first name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Name</td>
+                  <td>User&#039;s last name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Username</td>
+                  <td>User&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Defined Id</td>
+                  <td>User&#039;s org defined ID. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Id</td>
+                  <td>D2L ID of the user&#039;s role in the specified org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Name</td>
+                  <td>Role name of the user in the specified org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Log Event Type</td>
+                  <td>Status of the user&#039;s enrollment or withdrawal.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Log Date</td>
+                  <td>Date of the user&#039;s enrollment or withdrawal.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Final Grades</h2>
+            <p>Returns final grades for all users in course offerings. Required Permission Advanced Data Sets &gt; Can Execute Final Grades (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>User Id</td>
+                  <td>User&#039;s unique numeric D2L ID.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Defined Id</td>
+                  <td>User&#039;s org defined ID. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Username</td>
+                  <td>User&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>First Name</td>
+                  <td>User&#039;s first name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Name</td>
+                  <td>User&#039;s last name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Id</td>
+                  <td>D2L ID of the user&#039;s role in the specified org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Name</td>
+                  <td>Role name of the user in the specified org unit.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Id</td>
+                  <td>Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Name</td>
+                  <td>Semester name associated with the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Code</td>
+                  <td>Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Id</td>
+                  <td>D2L&#039;s unique identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Code</td>
+                  <td>Often the course identifier from an SIS system. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Section Name</td>
+                  <td>Name of the course section. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Calculated Grade (Percentage)</td>
+                  <td>Final calculated grade as a percentage. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Calculated Grade Last Modified Date</td>
+                  <td>Last modified date for the final calculated grade.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Adjusted Grade (Percentage)</td>
+                  <td>Final adjusted grade as a percentage.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Adjusted Last Modified Date</td>
+                  <td>Last modified date for the final adjusted grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Adjusted Comments</td>
+                  <td>Comments for the final adjusted grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Adjusted Grade Is Released?</td>
+                  <td>Indicates if the final adjusted grade is released.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Final Adjusted Last Modified By</td>
+                  <td>User that last modified the final adjusted grade. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Impersonated Session History</h2>
+            <p>The Impersonated Session History data set returns all impersonated sessions for a specific user or all users over a date range, including D2LSupport. Note: The course offerings must be children of a given parent org unit. Required Permission Advanced Data Sets &gt; Can Execute Impersonation Session History (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>SessionId</td>
+                  <td>Unique session identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit Identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>Username</td>
+                  <td>Username of the impersonated user</td>
+                  <td>nvarchar</td>
+                  <td>540</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>DateStarted</td>
+                  <td>Session start date time (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>DateEnded</td>
+                  <td>Session end date time (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>ImpersonatingUser Id</td>
+                  <td>Unique user identifier of the impersonator.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.8.5</td>
+                  <td>ImpersonatingUsername</td>
+                  <td>Impersonator&#039;s username.</td>
+                  <td>nvarchar</td>
+                  <td>540</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Instructor Usage</h2>
+            <p>The Instructor Usage data set returns information about how instructors are using Brightspace functionality within their courses. Required Permission Advanced Data Sets &gt; Can execute Instructor Usage (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Username</td>
+                  <td>Instructor&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>First Name</td>
+                  <td>Instructor&#039;s first name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Name</td>
+                  <td>Instructor&#039;s last name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Defined Id</td>
+                  <td>Instructor&#039;s Org Defined Id (often the learner identifier from an SIS system). Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>User Id</td>
+                  <td>D2L&#039;s unique identifier for the instructor.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Name</td>
+                  <td>Instructor&#039;s role at the specific course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Id</td>
+                  <td>Instructor&#039;s role Id at the specific course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Is Active</td>
+                  <td>Instructor&#039;s status.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Code</td>
+                  <td>Often the course identifier from an SIS system. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Id</td>
+                  <td>D2L&#039;s unique identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Content Topics Visited</td>
+                  <td>Number of content topics the instructor visited in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Access to Course Offering Content</td>
+                  <td>Last date/time the instructor accessed content within the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Assignments</td>
+                  <td>Number of assignments in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Assignment Submissions Commented on</td>
+                  <td>Number of assignment submissions the instructor commented on in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Grade Items</td>
+                  <td>Number of grade items in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Graded Grade Items</td>
+                  <td>Number of grade items the instructor graded in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Modification of a Grade Item</td>
+                  <td>Last date/time a grade item in the course was modified by the instructor. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Discussion Posts</td>
+                  <td>Number of discussion posts in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Discussion Posts Authored</td>
+                  <td>Number of discussion posts the instructor authored in the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Discussion Post Date</td>
+                  <td>Date/time the instructor last posted a discussion in the course. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Access to Course Offering</td>
+                  <td>Last date/time (UTC format) the instructor accessed the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number of Logins to the System</td>
+                  <td>Number of times the instructor accessed Brightspace.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Sent Mail Date</td>
+                  <td>Last date/time the instructor sent an email from within the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Learner Usage</h2>
+            <p>The Learner Usage data set returns the activity for learners in course offerings. The course offerings must be children of the selected org unit. The learners that are included depend on the date range selected (see note). About Time Tracking The time tracking in this report does not align with the SCORM Detailed Report. If a user opens a SCORM package in a new window, the Total Time Spent in the SCORM Detailed Report will be substantially higher because Learner Usage doesn&#039;t track that time. If a user opens a SCORM package in embed mode, the Total Time Spent in the SCORM Detailed Report will be slightly lower because it only tracks the time users spend interacting with the SCORM Object, whereas Learner Usage Report tracks the entire session. About SCORM Dates If a user clicks on a legacy SCORM topic it will be marked as completed, even if the user has not progressed through the entire topic and has a SCORM Report showing incomplete. This means that a user who visits a legacy SCORM topic will get both a Last SCORM Visit Date and a Last SCORM Completion Date Required Permission Advanced Data Sets &gt; Can execute Learner Usage (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Id</td>
+                  <td>Unique course offering numeric identifier in Brightspace.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Code</td>
+                  <td>Course offering string code. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Course Offering Name</td>
+                  <td>Course offering string name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Parent Department Name</td>
+                  <td>Org unit name of the parent department.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Parent Department Code</td>
+                  <td>Org unit code of the parent department. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Id</td>
+                  <td>Unique semester numeric identifier in Brightspace. If a course is not associated with a semester, the value is NULL. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Code</td>
+                  <td>Semester code associated with the course offering. The semester is the organization unit type as defined by the Standard Semester in Brightspace. If a semester is not associated as a direct parent of the course offering being exported, the value is NULL. If a course offering is associated with multiple semesters, these are exported as a pipe-delimited list of strings. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Semester Name</td>
+                  <td>Semester name associated with the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>User Id</td>
+                  <td>Internal numeric user identifier within Brightspace.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Username</td>
+                  <td>User name that identifies the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Org Defined Id</td>
+                  <td>Organization-defined identifier within Brightspace for the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>First Name</td>
+                  <td>First name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Name</td>
+                  <td>Last name.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Is Active</td>
+                  <td>Learner&#039;s status.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Id</td>
+                  <td>The learner&#039;s numeric role ID within the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Role Name</td>
+                  <td>A string identifying the learner&#039;s role within the course offering such as Learner. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Content Completed</td>
+                  <td>Number of content topics completed by the learner. See Note: Calculating Content Completed.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Content Required</td>
+                  <td>Number of content topics required by the learner (for user progress). See Note: Calculating Content Required.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Checklist Completed</td>
+                  <td>Number of checklists completed by the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Quiz Completed</td>
+                  <td>The total number of unique quizzes the user has attempted and completed. This does not include quizzes that are in progress.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Total Quiz Attempts</td>
+                  <td>The total number of quiz attempts the user has attempted and completed. This does not include quiz attempts that are in progress.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Discussion Post Created</td>
+                  <td>Number of discussion posts created by the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Discussion Post Replies</td>
+                  <td>Number of discussion replies by the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Discussion Post Read</td>
+                  <td>Number of discussion posts read by the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Discussion Post Date</td>
+                  <td>Date the user last posted to a discussion. If the user has not posted in any discussion, this field is NULL. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number Of Assignment Submissions</td>
+                  <td>Number of times the learner submitted an item to assignments within the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Assignment Submission Date</td>
+                  <td>Date/time the learner&#039;s last submission/post into an assignment. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Total Time Spent In Content</td>
+                  <td>Sum of all the time spent in course content, measured in seconds. If the learner has not visited any of the content in this course, this field is ZERO. If the learner has multiple instances or tabs open with the same content, this tracks each instance as a separate session, and as a result, substantially increases total time spent.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last Visited Date</td>
+                  <td>Most recent visit date/time for the course. If the course has not been visited by the learner, this field is NULL. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Last System Login</td>
+                  <td>Date/time the learner last logged in to Brightspace. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Number Of Logins To The System</td>
+                  <td>Total number of times the learner logged in to Brightspace.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.7.0</td>
+                  <td>Auditor Name</td>
+                  <td>Username of the user who is assigned as the auditor for this learner. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.7</td>
+                  <td>Last Quiz Attempt Date</td>
+                  <td>Date the learner last attempted and completed a quiz. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.7</td>
+                  <td>Last Scorm Completion Date</td>
+                  <td>Date the learner last completed a SCORM object. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.7</td>
+                  <td>Last Scorm Visit Date</td>
+                  <td>Date the learner last launched or interacted with a SCORM object. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Program Level Outcomes Evaluation (PLOE)</h2>
+            <p>The PLOE data set provides a list of competencies and learning objectives related to the org unit selected and provides insight into outcome achievement across multiple courses within a program. Data comes from the Competencies tool, not the Learning Outcomes tool. Required Config Variable d2l.Tools.AdvancedDataSets.ProgramOrgUnitTypeId (set the org unit type ID that represents a program for an org) Required Permission Advanced Data Sets &gt; Can execute PLOE (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OrgUnitId</td>
+                  <td>The org unit for which we want to collect results</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OrgUnitName</td>
+                  <td>The name of the org unit</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OrgUnitCode</td>
+                  <td>The code of the org unit</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>Program</td>
+                  <td>The program is a custom org unit type, with the filter parameter passed in. There should be one line per program. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OutcomeId</td>
+                  <td>Identifier of the competency or learning outcome</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OutcomeType</td>
+                  <td>Type of outcome. Options are Competency or Learning Objective</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OutcomeName</td>
+                  <td>Name of the outcome</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OutcomeStatus</td>
+                  <td>Status of the outcome Competency status options are Draft, In Review, Approved, or ArchivedLearning Objective options are Ready for evaluation or Not ready for evaluation</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>FirstName</td>
+                  <td>First name of the learner being assessed by the outcome</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>LastName</td>
+                  <td>Last name of the learner being assessed by the outcome</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>UserName</td>
+                  <td>Username of the learner being assessed by the outcome</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>OrgDefinedId</td>
+                  <td>Identifier of the learner defined by the org unit</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>UserId</td>
+                  <td>Numeric identifier of the learner</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>RoleName</td>
+                  <td>Name of the user&#039;s role in the org unit</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>RoleId</td>
+                  <td>Identifier of the user&#039;s role in the org unit</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>IsAchieved</td>
+                  <td>Indicates if the outcome is achieved. 1=Achieved, 0=Not achieved, Null=not assessed Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.10</td>
+                  <td>AchievementDateTime</td>
+                  <td>Indicates the date and time the achievement was accomplished</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Rubric Assessments</h2>
+            <p>The Rubric Assessments data set provides insight on how rubrics are used, the assessments they are used against, and the scoring for all individual learner assessments. Note: This data set only reports on fully assessed rubrics. For rubrics using a Text Only scoring method, there must be an Overall Score provided for the rubric to be considered fully assessed and to show in the report. Required Permission Advanced Data Sets &gt; Can execute Rubric Assessments (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Course Org Unit Id</td>
+                  <td>Unique identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Course Name</td>
+                  <td>Name of the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Course Code</td>
+                  <td>Course offering code. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Parent Department Name</td>
+                  <td>Parent department org unit name of the course offering. This may contain multiple values. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Parent Semester Name</td>
+                  <td>Parent semester org unit name of the course offering. This may contain multiple values. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Parent Course Template Name</td>
+                  <td>Parent course template name of the course offering. This may contain multiple values. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Course Section Id</td>
+                  <td>Unique identifier of the user&#039;s section within the course. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Course Section Name</td>
+                  <td>Name of the section the user is in. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Course Section Code</td>
+                  <td>Code of the section the user is in. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Rubric Id</td>
+                  <td>Unique identifier of the rubric.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Rubric Name</td>
+                  <td>Name of the rubric.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Activity Id</td>
+                  <td>Unique identifier of the activity the rubric is associated with.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Activity Type</td>
+                  <td>Tool type in which the activity is represented.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Activity Name</td>
+                  <td>Name of the activity that the rubric was used for.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>User Id</td>
+                  <td>Unique identifier of the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>First Name</td>
+                  <td>First name of the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Last Name</td>
+                  <td>Last name of the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Username</td>
+                  <td>Username of the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Org Defined Id</td>
+                  <td>Org defined Id of the user. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Role Id</td>
+                  <td>Unique role identifier.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Role Name</td>
+                  <td>Name of the role assigned to the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Criterion Id</td>
+                  <td>Unique identifier of the rubric criterion.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Criterion</td>
+                  <td>Name of the rubric criterion.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Level</td>
+                  <td>Level that the user obtained on the criterion. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Points</td>
+                  <td>Number of points that the user scored on the criterion. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Overall Level Achieved</td>
+                  <td>Overall level achieved by the user on the rubric. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Is Score Overridden</td>
+                  <td>Indicates if the score is overridden by instructor.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Evaluation Date</td>
+                  <td>Date that the criterion was last assessed for the user. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Assessor User Id</td>
+                  <td>Unique identifier of the user who completed the rubric assessment.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Assessor First Name</td>
+                  <td>First name of the assessor.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Assessor Last Name</td>
+                  <td>Last name of the assessor.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Assessor Username</td>
+                  <td>Username of the assessor.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.8</td>
+                  <td>Assessor Org Defined Id</td>
+                  <td>Org defined Id of the assessor. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Survey Results</h2>
+            <p>The Survey Results advanced data set provides detailed information on the surveys available in the organization. Required Permission Advanced Data Sets &gt; Can execute Survey Results (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Survey Id</td>
+                  <td>Unique survey identifier.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Survey Name</td>
+                  <td>Name of the survey.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Attempt Id</td>
+                  <td>Unique attempt identifier.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Active Status</td>
+                  <td>Indicates if the survey is active or not.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Course Offering Id</td>
+                  <td>D2L&#039;s unique identifier for the course offering.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Course Offering Code</td>
+                  <td>Often the course identifier from an SIS system. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Course Offering Name</td>
+                  <td>Name of the course offering. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Parent Department Name</td>
+                  <td>Name of department. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Parent Department Code</td>
+                  <td>Department code. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Respondent User Id</td>
+                  <td>Unique user identifier. Null if survey is anonymous. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Respondent Username</td>
+                  <td>User&#039;s username. If survey is anonymous, username is &quot;anonymous&quot;.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Respondent First Name</td>
+                  <td>User&#039;s first name. Null if survey is anonymous. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Respondent Last Name</td>
+                  <td>User&#039;s last name. Null if survey is anonymous. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Category Name</td>
+                  <td>Category Name for the survey. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Submission Date</td>
+                  <td>Date survey was submitted.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Question Number</td>
+                  <td>Unique survey question identifier. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Question</td>
+                  <td>Survey question. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.20.12</td>
+                  <td>Answer</td>
+                  <td>Survey answer. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Terms &amp; Conditions - Activity Report</h2>
+            <p>Returns the most recent accept or decline responses of the Terms and Conditions for each user. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets &gt; Can execute Terms and Conditions (Organization level)</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>User Id</td>
+                  <td>D2L&#039;s unique identifier for the user.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Org Defined Id</td>
+                  <td>Learner&#039;s org defined ID. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Username</td>
+                  <td>Learner&#039;s username.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>First Name</td>
+                  <td>First name of the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Last Name</td>
+                  <td>Last name of the learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Is Active</td>
+                  <td>Learner&#039;s status.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Date</td>
+                  <td>Date the Terms and Conditions were accepted or declined.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Has Accepted</td>
+                  <td>True or false response for the Learner.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Comments</td>
+                  <td>Any comments associated with the version. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Title</td>
+                  <td>Title of the terms and conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Id</td>
+                  <td>Version identifier for the Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Terms &amp; Conditions - Version History Report</h2>
+            <p>Returns the version history for the Terms and Conditions. This Advanced Data Set only appears in Data Hub if the Terms and Conditions tool is enabled. Required Permission Advanced Data Sets &gt; Can execute Terms and Conditions (Organization level) Available Filters: None</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Id</td>
+                  <td>Version identifier for the Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Org Id</td>
+                  <td>Unique identifier of the org where the Terms and Conditions are implemented.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Language</td>
+                  <td>Language of the Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Title</td>
+                  <td>Title of the Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Terms and Conditions</td>
+                  <td>Contents of the Terms and Conditions. This field is restricted to 1000 characters.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Comments</td>
+                  <td>Any comments associated with the Terms and Conditions. Field can be null.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Created Date</td>
+                  <td>Date the Terms and Conditions were created.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Created By Id</td>
+                  <td>ID of the user who created the Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Created By First Name</td>
+                  <td>Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>20.21.3</td>
+                  <td>Version Created By Last Name</td>
+                  <td>Terms and Conditions.</td>
+                  <td>varchar</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Question Library</h2>
+            <p>The Question Library Brightspace Data Set details all the questions that have been created in the organization. This includes quiz questions that are not currently used in a quiz.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier. Each time you edit a quiz, survey, or self-assessment question, a new version of that question is created, indicated by the QuestionVersionID field.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>IsAutoGraded</td>
+                  <td>Indicates if the question is automatically graded.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Removed FK</td>
+                  <td>TemplateTypeId</td>
+                  <td>Unique identifier of the template used to create this question. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>QuestionType</td>
+                  <td>Type of question. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>28</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Updated column size</td>
+                  <td>Name</td>
+                  <td>Question name. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>Question</td>
+                  <td>Body of the question. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>Comment</td>
+                  <td>Comment associated with the question. Field can be null. When you add a question to a quiz, the Overall Question Feedback field provides feedback comments during the grading process. The information captured in this field is the Comment field.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>AnswerKey</td>
+                  <td>Answer key for the question. This only applies to Written Response Questions. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Field</td>
+                  <td>CreationDate</td>
+                  <td>Date the question was created (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.8 / 6.1</td>
+                  <td>AllowsAttachments</td>
+                  <td>Indicates if attachments are allowed in this question. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.9</td>
+                  <td>AIUtilization</td>
+                  <td>Indicates whether D2L Lumi (Brightspace AI) capabilities were used and the level of AI involvement. Possible values: 0 - No AI capabilities were involved. 1 - Generated by AI and reviewed by a human. 2 - Generated by AI and edited by a human. 3 - Assisted or uplifted by AI.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Question Relationships</h2>
+            <p>The Question Relationships Brightspace Data Set details which quizzes, sections, question pools, surveys, or self-assessments the questions in Question Library have been added to.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>7.5 - Updated key</td>
+                  <td>CollectionId</td>
+                  <td>Unique question collection identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.5 - Updated key</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>7.6 -Updated key</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier. Each time you edit a quiz, survey, or self-assessment question, a new version of that question is created, indicated by the QuestionVersionID field. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>Order</td>
+                  <td>Order in which questions appear in the user interface. If the question is within a section, the Order field uses the section&#039;s order in the user interface.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>SectionId</td>
+                  <td>Unique section identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>IsQuestionPool</td>
+                  <td>Indicates if the question pool is a random section.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>CreationDate</td>
+                  <td>Date the question was created (UTC)</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>CreatedBy</td>
+                  <td>Id of the user who created the quiz, section, question pool, survey, or self-assessment. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>LastModified</td>
+                  <td>Date when the quiz, section, question pool, survey, or self-assessment was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user who last modified the quiz, section, question pool, survey, or self-assessment. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Points</td>
+                  <td>Possible points for the question. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>Difficulty</td>
+                  <td>Difficulty level assigned to the question. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>IsBonus</td>
+                  <td>Indicates if the question is a bonus question. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>IsMandatory</td>
+                  <td>Indicates if the question is mandatory. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11 - Updated description</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the question is deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.0</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the question. This column supports the Question Pools information in the Assessment Quality Dashboard. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.6 -Updated key</td>
+                  <td>ObjectId</td>
+                  <td>Unique identifier of the question.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

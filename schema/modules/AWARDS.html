@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Award Objects</h2>
+            <p>The Award Objects Brightspace Data Set returns details on all awards that were created anywhere in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.4</td>
+                  <td>AwardId</td>
+                  <td>Unique award identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Name</td>
+                  <td>Award name</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>AwardTypeId</td>
+                  <td>Award type identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Type</td>
+                  <td>Award type (Certificate or Badge)</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.7 - Changed Description</td>
+                  <td>Description</td>
+                  <td>Description of the award.</td>
+                  <td>nvarchar</td>
+                  <td>512</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>ExpiryCalculationType</td>
+                  <td>Calculation type for expiry of award</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>ExpiryNotificationType</td>
+                  <td>Time unit for expiry notification (such as days)</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.7 - Updated description</td>
+                  <td>ExpiryDate</td>
+                  <td>Date when the award is scheduled to expire. Can be NULL if the award never expires or has a relative expiry date.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>ImagePath</td>
+                  <td>Indicates the location where the award image is stored. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Field</td>
+                  <td>CreatedByUserId</td>
+                  <td>User who created the award</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>LastModified</td>
+                  <td>Date award was last changed (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates whether the award is deleted</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.7</td>
+                  <td>Criteria</td>
+                  <td>Indicates the criteria necessary to issue the award. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Awards Issued</h2>
+            <p>The Awards Issued Brightspace Data Set returns a list of all the awards that have been issued for your org units. The only available data for the LastModifiedDate field is from August 2023 onwards.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2.5 / 3.0 - Added FK</td>
+                  <td>AwardId</td>
+                  <td>Unique award identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.4 - Removed PK</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IssuedBy</td>
+                  <td>Issued by user ID</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IssueDate</td>
+                  <td>Award issue date (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>ExpiryDate</td>
+                  <td>Award expiry date (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.4</td>
+                  <td>IssuedId</td>
+                  <td>Unique issued identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.0 - Changed Description</td>
+                  <td>Criteria</td>
+                  <td>Indicates the criteria necessary to issue the award.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Changed Description</td>
+                  <td>Evidence</td>
+                  <td>Provides proof that the user has met the criteria for the award.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>RevokedDate</td>
+                  <td>Award revocation date (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>RevokedReason</td>
+                  <td>Reason for revoking issued award. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>RevokedBy</td>
+                  <td>User who revoked the award. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>LastModifiedBy</td>
+                  <td>User who last modified the issued award object.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.5 - Updated Description</td>
+                  <td>LastModifiedDate</td>
+                  <td>Date the issued award object was last modified (UTC). Only captures data from August 2023 onwards. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>Version</td>
+                  <td>Version number of this issued award.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Course Awards</h2>
+            <p>The Course Awards Brightspace Data Set returns a list of all the awards that exist in each course for all your org units.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.4</td>
+                  <td>AssociationId</td>
+                  <td>Unique association identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AwardId</td>
+                  <td>Unique award identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>DateCreated</td>
+                  <td>Date when the award was created (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.0</td>
+                  <td>HiddenAward</td>
+                  <td>Award is hidden from learner view</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.0</td>
+                  <td>ConditionSetId</td>
+                  <td>Identifier for the conditions that need to be met in order to issue this award. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.12 / 9.1</td>
+                  <td>LastModified</td>
+                  <td>Date when the award was last changed (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.12 / 9.1</td>
+                  <td>Credits</td>
+                  <td>Indicates if the award has credits, and how many. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>9, 2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.12 / 9.1</td>
+                  <td>IsAssociated</td>
+                  <td>Indicates whether the award is associated to the course.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.12 / 9.1</td>
+                  <td>Version</td>
+                  <td>Version number for the course award.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

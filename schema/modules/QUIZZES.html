@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="fallbackPageContent">
+    <main>
+      <section>
+        <div class="mainColumn">
+          <article>
+            <h2>Quiz Attempts</h2>
+            <p>The Quiz Attempts Brightspace Data Set returns details for each user quiz attempt for all your org units. This data set includes completed quiz attempts and in-progress quiz attempts.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>QuizId</td>
+                  <td>Unique quiz identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>UserId</td>
+                  <td>Unique user identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>OrgUnitId</td>
+                  <td>Unique org unit identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptNumber</td>
+                  <td>Attempt number for the quiz</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>TimeStarted</td>
+                  <td>Quiz attempt start time (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>TimeCompleted</td>
+                  <td>Quiz attempt completion time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Score</td>
+                  <td>Score for the attempt. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsGraded</td>
+                  <td>If a quiz has been graded</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.10</td>
+                  <td>OldAttemptNumber</td>
+                  <td>Number of previous times a learner has attempted the quiz. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.10</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates that the quiz attempt is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.8 / 6.1</td>
+                  <td>PossibleScore</td>
+                  <td>Indicates the total possible value of the quiz attempt. This should indicate what the quiz &quot;out of&quot; score is, even if the quiz total possible value changes after the attempt is made. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>8.10 - Updated description</td>
+                  <td>IsRetakeIncorrectOnly</td>
+                  <td>Indicates if this attempt only includes questions that were incorrect on a previous attempt.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11</td>
+                  <td>DueDate</td>
+                  <td>Quiz attempt due date (UTC). Based on when the learner begins the attempt, even if the instructor changes the quiz due date later. This does not take any special access time limit into account. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11</td>
+                  <td>TimeLimit</td>
+                  <td>Amount of time, in minutes, that a learner has to complete the quiz attempt. Based on when the learner begins the attempt, even if the instructor changes the quiz time limit later. This does not take any special access time limit into account. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.11</td>
+                  <td>TimeLimitEnforced</td>
+                  <td>Indicates whether the time limit on this quiz attempt is enforced. Based on when the learner begins the attempt, even if the instructor changes the time limit enforced setting later. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0 - Changed Field name and Description</td>
+                  <td>TimeLimitExceededBehaviour</td>
+                  <td>If the time limit is enforced for this attempt, indicates the desired behavior when the time limit is exceeded. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>IsSynchronous</td>
+                  <td>Indicates that a quiz attempt is synchronous. A synchronous quiz&#039;s timer starts on the start date.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>DeductionPercentage</td>
+                  <td>The percentage of a question&#039;s point value that is deducted from the quiz attempt score if the question is answered incorrectly. This value remains constant once the learner begins the attempt, even if the instructor changes the deduction percentage later. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz Attempts Log</h2>
+            <p>The Quiz Attempts Log Brightspace Data Set returns details on the events that occur during a quiz attempt. This data set includes completed quiz attempts and in-progress quiz attempts. There is no explicit time cap placed on this data set. However, data is sorted from newest to oldest and older data will be dropped if the data set reaches the row limit.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.6 / 4.1</td>
+                  <td>LogId</td>
+                  <td>Unique log identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.1</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>EventTypeId</td>
+                  <td>Unique event type identifier</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Name</td>
+                  <td>Name of the event.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Description</td>
+                  <td>Description of the event. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.1</td>
+                  <td>EventTime</td>
+                  <td>Event occurred time (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.1</td>
+                  <td>IPAddress</td>
+                  <td>IPAddress at which the event occurred. Field may be null for quiz submit events where the quiz was auto-submitted.</td>
+                  <td>varchar</td>
+                  <td>15</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz Objects</h2>
+            <p>The Quiz Objects Brightspace Data Set returns information about the settings and properties of a quiz.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.7</td>
+                  <td>QuizId</td>
+                  <td>Unique quiz identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>QuizName</td>
+                  <td>Quiz name</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>QuizDescription</td>
+                  <td>Description of the Quiz. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>QuizCategory</td>
+                  <td>Name of category quiz is assigned to. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>IsActive</td>
+                  <td>Indicates if the quiz is active</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>OrgUnitId</td>
+                  <td>Org unit identifier associated with the quiz object</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>StartDate</td>
+                  <td>First time the quiz is visible. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>EndDate</td>
+                  <td>Last date the quiz is visible. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>DueDate</td>
+                  <td>Date the quiz is due (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>CreationDate</td>
+                  <td>Date the quiz was created (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>CreatedBy</td>
+                  <td>Id of the user who created the quiz. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>LastModified</td>
+                  <td>Date when the quiz was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user who last modified the quiz. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>GradeObjectId</td>
+                  <td>Grade object identifier associated with the quiz. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>OverallScoreCalculation</td>
+                  <td>Quiz score calculation method. Types include: Highest Attempt, Lowest Attempt, Average of all attempts, First Attempt, and Last Attempt. Field can be null.</td>
+                  <td>varchar</td>
+                  <td>23</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>QuizScoreDenominator</td>
+                  <td>Denominator for the quiz score</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>HasPassword</td>
+                  <td>Indicates if a password is required to access this quiz. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>IPRestricted</td>
+                  <td>Indicates if this quiz is available only to certain IP Addresses. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>TimeLimit</td>
+                  <td>Time limit for the quiz in minutes.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>TimeLimitEnforced</td>
+                  <td>Indicates if the time limit assigned to the quiz is enforced.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>AttemptsAllowed</td>
+                  <td>Number of times learners are permitted to attempt the quiz. Null indicates unlimited attempts.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>PreventMovingBackwards</td>
+                  <td>Indicates if learners are permitted to move to previous pages in the quiz.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>AllowHints</td>
+                  <td>Indicates that there are hints allowed for the quiz.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>NotificationEmail</td>
+                  <td>Indicates that there is a notification email for this quiz if present. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>DisablePagerAccess</td>
+                  <td>Indicates that learners cannot access the pager functionality</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.7</td>
+                  <td>DisplayInCalendar</td>
+                  <td>Indicates if the quiz is displayed in the Calendar. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2.2</td>
+                  <td>IsAttemptRldb</td>
+                  <td>Indicates if Respondus LockDown Browser is required to attempt this quiz.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2.2</td>
+                  <td>IsSubviewRldb</td>
+                  <td>Indicates if Respondus LockDown Browser is required to see quiz results (submission view).</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2.2</td>
+                  <td>SortOrder</td>
+                  <td>Display sort order for quizzes (when not alphabetical).</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.9 / 6.2</td>
+                  <td>CategoryId</td>
+                  <td>Unique category identifier for the quiz. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.9 / 6.2</td>
+                  <td>ResultId</td>
+                  <td>Unique release condition result identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.10 - Updated description</td>
+                  <td>IsRetakeIncorrectOnly</td>
+                  <td>Indicates if the quiz allows Retake Incorrect Only.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7.14 / 8.0 - Updated field description</td>
+                  <td>PagingTypeId</td>
+                  <td>Exposes page break information. Possible values: Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>IsSynchronous</td>
+                  <td>Indicates that a quiz is synchronous. A synchronous quiz&#039;s timer starts on the start date.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.0</td>
+                  <td>DeductionPercentage</td>
+                  <td>The percentage of a question&#039;s point value that will be deducted from the quiz attempt score if the question is answered incorrectly. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz Question Answer Options</h2>
+            <p>The Quiz Question Answer Options Brightspace Data Set returns possible options for a given quiz answer. Only includes answer options for these question types: Short Answer, Fill in the Blanks, and Multi-Short Answer. Rows in the data set are filtered out if they are associated with deleted quiz attempts.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerId</td>
+                  <td>Unique answer Identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerText</td>
+                  <td>User answer. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Weight</td>
+                  <td>Weight associated with the answer</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>QuizObjectId</td>
+                  <td>Unique quiz object identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.2</td>
+                  <td>AnswerOptionId</td>
+                  <td>Unique answer option identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz Question Answers</h2>
+            <p>The Quiz Question Answers Brightspace Data Set returns possible answers for a given quiz question. This includes questions in sections or question pools.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerId</td>
+                  <td>Unique answer identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>SortOrder</td>
+                  <td>Order in which the quiz answers are displayed or correct answer order for ordering questions.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsCorrect</td>
+                  <td>Is answer correct. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Weight</td>
+                  <td>Weight associated with answer. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Answer</td>
+                  <td>Answer text. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Comment</td>
+                  <td>Instructor comment on the answer. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.7 / 6.0 - Changed Column Size</td>
+                  <td>Description</td>
+                  <td>System description for the type of answer expected.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>ObjectId</td>
+                  <td>Unique identifier of the answer</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz Survey Sections</h2>
+            <p>The Quiz Survey Sections Brightspace Data Set returns information about all the sections and question pools that have been created in quizzes in the organization.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.7 / 5.1 - Updated description</td>
+                  <td>CollectionId</td>
+                  <td>Unique question collection identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>SectionId</td>
+                  <td>Unique section identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>Name</td>
+                  <td>Name of the section (title). Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>256</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>NameIsDisplayed</td>
+                  <td>Indicates if the section name (title) is hidden or shown. Values are 0 for hidden, and 1 for shown.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>IsQuestionPool</td>
+                  <td>Indicates if the section is a question pool.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>SectionText</td>
+                  <td>Section text. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.4</td>
+                  <td>SectionTextIsHTML</td>
+                  <td>Indicates if the section text is HTML or plain text.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>IsSectionTextHidden</td>
+                  <td>Indicates if the section text is hidden or shown. Values are 0 for hidden, and 1 for shown.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>QuestionPoints</td>
+                  <td>Number of points the section is worth when the section is a question pool. Sections that are not question pools will show as null. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>NumQuestions</td>
+                  <td>Indicates the number of questions in the section if the section is a question pool. If the section is not a question pool, 0 is displayed.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>NumChoices</td>
+                  <td>Indicates the number of choices in the question pool (pool size).</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>Shuffle</td>
+                  <td>Indicates that the questions in the section are shuffled. Not to be confused with a question pool; a shuffled section displays the questions shuffled randomly.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>CreationDate</td>
+                  <td>Date the section was created (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>CreatedBy</td>
+                  <td>Id of the user who created the section. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>LastModified</td>
+                  <td>Date when the section was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user who last modified the section. If questions are imported into the section, this will be null. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates that the section is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.4 - Updated description</td>
+                  <td>Version</td>
+                  <td>Indicates the version of the row. This information is used to determine which table row occurred first, similar to the way time stamps function in other data sets. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz User Answer Responses</h2>
+            <p>The Quiz User Answer Responses Brightspace Data Set returns details on how a user answered a specific quiz question. Data includes whether an answer is correct and details around the quiz score. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answer Responses Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptNumber</td>
+                  <td>Attempt number associated with the AttemptId</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>AnswerId</td>
+                  <td>Unique answer identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>SortOrder</td>
+                  <td>Order in which quiz question options appear to the user. For example, the order in which multi-select or true /false options appear. Some question types can be randomized, for example, multi-select.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>IsCorrect</td>
+                  <td>Is user response correct. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserSelection</td>
+                  <td>Indicates the option a user chose for a block question type (ie. True and False, Multiple Choice, Multi-Select). Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>UserAnswer</td>
+                  <td>Indicates the user answer for written question types (ie. Short Answer, Written Response). Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5.8 / 6.1</td>
+                  <td>FileSetId</td>
+                  <td>Indicates the auto generated file set ID of uploaded file(s). Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>LastModified</td>
+                  <td>Date and time when the question answer response was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.10</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the question answer response is deleted. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Quiz User Answers</h2>
+            <p>The Quiz User Answers Brightspace Data Set returns data that describes the question and score the user received. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Version History</th>
+                  <th>Field</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Column Size</th>
+                  <th>Key</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.0</td>
+                  <td>AttemptId</td>
+                  <td>Unique attempt identifier</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK, FK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated description</td>
+                  <td>QuestionId</td>
+                  <td>Unique question identifier.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>5.12 / 6.5 - Updated key</td>
+                  <td>QuestionVersionId</td>
+                  <td>Unique question version identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>8.11 / 9.0 - Updated description</td>
+                  <td>TimeCompleted</td>
+                  <td>Date/time when the question was completed (UTC). No data is provided for question pools or sections. Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>QuestionNumber</td>
+                  <td>Question number in the quiz. Field can be null.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Comment</td>
+                  <td>Feedback left by instructor. Field can be null.</td>
+                  <td>nvarchar</td>
+                  <td>1000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>SortOrder</td>
+                  <td>Order in which quiz questions appear in the user interface. This also accounts for the ordering of sections (question numbers are null for sections).</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4.8 / 5.2 - Updated column size</td>
+                  <td>Score</td>
+                  <td>Score the user received for the answer. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>1.0</td>
+                  <td>Page</td>
+                  <td>Page the question appeared on when the user took the quiz</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3.6 / 4.1</td>
+                  <td>SectionId</td>
+                  <td>Unique section identifier. Field can be null.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>6.7 - Updated key</td>
+                  <td>ObjectId</td>
+                  <td>Unique global identifier of the question object.</td>
+                  <td>bigint</td>
+                  <td>8</td>
+                  <td>PK</td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>OutOf</td>
+                  <td>The denominator of the quiz score. Field can be null.</td>
+                  <td>decimal</td>
+                  <td>19, 9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>TimeStarted</td>
+                  <td>Quiz attempt start date and time (UTC). Field can be null.</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>IsBonus</td>
+                  <td>Indicates if the question is a bonus question. Field can be null.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>IsDeleted</td>
+                  <td>Indicates if the answer is deleted.</td>
+                  <td>bit</td>
+                  <td>1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>LastModified</td>
+                  <td>Date and time when the question answer was last modified (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>LastModifiedBy</td>
+                  <td>Id of the user or task who last modified the question.</td>
+                  <td>int</td>
+                  <td>4</td>
+                  <td>FK</td>
+                </tr>
+                <tr>
+                  <td>9.8</td>
+                  <td>QuizTimeCompleted</td>
+                  <td>Date and time a quiz attempt was completed (UTC).</td>
+                  <td>datetime2</td>
+                  <td>8</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

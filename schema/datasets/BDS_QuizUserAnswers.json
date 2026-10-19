@@ -1,0 +1,188 @@
+{
+    "type": "BDS",
+    "name": "Quiz User Answers",
+    "url": "https:\/\/community.d2l.com\/brightspace\/kb\/articles\/4532-quizzes-data-sets#quiz-user-answers",
+    "description": "The Quiz User Answers Brightspace Data Set returns data that describes the question and score the user received. Rows in the data set are filtered out if they are associated with deleted quiz questions. The Quiz User Answers Brightspace Data Set contains data from 1 January 2021 onwards and adheres to the default system limit of 150 million rows of the most recent data.",
+    "columns": [
+        {
+            "name": "AttemptId",
+            "description": "Unique attempt identifier",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "QuestionId",
+            "description": "Unique question identifier.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated description"
+        },
+        {
+            "name": "QuestionVersionId",
+            "description": "Unique question version identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "5.12 \/ 6.5 - Updated key"
+        },
+        {
+            "name": "TimeCompleted",
+            "description": "Date\/time when the question was completed (UTC). No data is provided for question pools or sections. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "8.11 \/ 9.0 - Updated description"
+        },
+        {
+            "name": "QuestionNumber",
+            "description": "Question number in the quiz. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Comment",
+            "description": "Feedback left by instructor. Field can be null.",
+            "type": "nvarchar",
+            "size": "1000",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SortOrder",
+            "description": "Order in which quiz questions appear in the user interface. This also accounts for the ordering of sections (question numbers are null for sections).",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "Score",
+            "description": "Score the user received for the answer. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "4.8 \/ 5.2 - Updated column size"
+        },
+        {
+            "name": "Page",
+            "description": "Page the question appeared on when the user took the quiz",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "1.0"
+        },
+        {
+            "name": "SectionId",
+            "description": "Unique section identifier. Field can be null.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "3.6 \/ 4.1"
+        },
+        {
+            "name": "ObjectId",
+            "description": "Unique global identifier of the question object.",
+            "type": "bigint",
+            "size": "8",
+            "isPrimary": true,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "6.7 - Updated key"
+        },
+        {
+            "name": "OutOf",
+            "description": "The denominator of the quiz score. Field can be null.",
+            "type": "decimal",
+            "size": "19, 9",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "TimeStarted",
+            "description": "Quiz attempt start date and time (UTC). Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "IsBonus",
+            "description": "Indicates if the question is a bonus question. Field can be null.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "IsDeleted",
+            "description": "Indicates if the answer is deleted.",
+            "type": "bit",
+            "size": "1",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "LastModified",
+            "description": "Date and time when the question answer was last modified (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "LastModifiedBy",
+            "description": "Id of the user or task who last modified the question.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        },
+        {
+            "name": "QuizTimeCompleted",
+            "description": "Date and time a quiz attempt was completed (UTC).",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": false,
+            "versionHistory": "9.8"
+        }
+    ]
+}
