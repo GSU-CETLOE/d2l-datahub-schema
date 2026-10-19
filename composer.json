@@ -5,7 +5,7 @@
   "require": {
     "php": "^8.1",
     "ext-dom": "*",
-    "mjfklib/container": "^1.0"
+    "gsu-cetloe/cetloelib-php": "dev-main"
   },
   "require-dev": {
     "phpstan/extension-installer": "^1.3",

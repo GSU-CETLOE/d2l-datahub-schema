@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace GSU\D2L\DataHub\Schema;
 
-use mjfklib\Container\DefinitionSource;
-use mjfklib\Container\Env;
+use Cetloe\Container\DefinitionSource;
+use Cetloe\Container\Env;
 
 final class SchemaDefinitionSource extends DefinitionSource
 {

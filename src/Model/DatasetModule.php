@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace GSU\D2L\DataHub\Schema\Model;
 
 use GSU\D2L\DataHub\Schema\Model\DatasetSchemaType;
-use mjfklib\Utils\ArrayValue;
+use Cetloe\Utils\ArrayValue;
 
 final class DatasetModule implements \JsonSerializable
 {

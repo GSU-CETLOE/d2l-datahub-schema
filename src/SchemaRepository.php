@@ -9,9 +9,9 @@ use GSU\D2L\DataHub\Schema\Model\DatasetModule;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchema;
 use GSU\D2L\DataHub\Schema\Model\DatasetSchemaType;
 use GSU\D2L\DataHub\Schema\Model\SQLType;
-use mjfklib\Utils\ArrayValue;
-use mjfklib\Utils\FileMethods;
-use mjfklib\Utils\JSON;
+use Cetloe\Utils\ArrayValue;
+use Cetloe\Utils\FileMethods;
+use Cetloe\Utils\JSON;
 
 final class SchemaRepository implements SchemaRepositoryInterface
 {

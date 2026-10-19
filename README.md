@@ -73,7 +73,7 @@ $repo->fetchSqlTablePath(SQLType::MYSQL, $schema, '_LOAD'); // .../schema/sql/my
 
 Other useful calls: `listDatasets()` for the full name map, `listModules()` and `fetchModule('GRADES')` for the documentation groupings, and `listSqlTables(SQLType::ORACLE)` for the table map. `storeDataset()` writes a schema back to disk, and the `cleanUp*` methods delete generated files. You will not need those unless you are regenerating the collection.
 
-If you use the `mjfklib` container, register `SchemaDefinitionSource` and ask for `SchemaRepositoryInterface`. It honors three environment variables for pointing the repository at a different copy of the schema files: `DATASETS_DIR`, `MODULES_DIR`, and `SQL_TABLES_DIR`.
+If you use the `cetloelib-php` container, register `SchemaDefinitionSource` and ask for `SchemaRepositoryInterface`. It honors three environment variables for pointing the repository at a different copy of the schema files: `DATASETS_DIR`, `MODULES_DIR`, and `SQL_TABLES_DIR`.
 
 ## Working on the package
 

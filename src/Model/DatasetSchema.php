@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace GSU\D2L\DataHub\Schema\Model;
 
-use mjfklib\Utils\ArrayValue;
+use Cetloe\Utils\ArrayValue;
 
 final class DatasetSchema
 {
