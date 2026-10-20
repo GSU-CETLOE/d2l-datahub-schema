@@ -33,15 +33,18 @@ The generator that produced the JSON from the D2L pages is not part of this repo
 
 ## Installing
 
-The package is not on Packagist under this name. Point Composer at the repository directly:
+The package is published on Packagist as [gsu-cetloe/d2l-datahub-schema](https://packagist.org/packages/gsu-cetloe/d2l-datahub-schema):
+
+```sh
+composer require gsu-cetloe/d2l-datahub-schema
+```
+
+Or add it to `composer.json` by hand:
 
 ```json
 {
-  "repositories": [
-    { "type": "vcs", "url": "https://github.com/GSU-CETLOE/d2l-datahub-schema" }
-  ],
   "require": {
-    "gsu-cetloe/d2l-datahub-schema": "^2.0"
+    "gsu-cetloe/d2l-datahub-schema": "^1.0"
   }
 }
 ```
