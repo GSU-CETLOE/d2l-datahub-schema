@@ -29,5 +29,8 @@ CREATE TABLE `LTILink_LOAD` (
   `OuAvailabilitySetId` BIGINT DEFAULT NULL,
   `LastModifiedBy` INT DEFAULT NULL,
   `IsDeleted` TINYINT DEFAULT NULL,
+  `CreatedDate` DATETIME DEFAULT NULL,
+  `DeploymentId` CHAR(36) DEFAULT NULL,
+  `LinkSubType` INT DEFAULT NULL,
   UNIQUE KEY (`LtiLinkId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

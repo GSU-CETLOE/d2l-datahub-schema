@@ -1,0 +1,34 @@
+{
+    "columns": [
+        {
+            "name": "CreatedDate",
+            "description": "Date and time the LTI link was created (UTC). Added by D2L after the base definition was captured; present in LtiLinks.csv extracts as of October 2026. Field can be null.",
+            "type": "datetime2",
+            "size": "8",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "override 2026-10-26 - added from the extract header"
+        },
+        {
+            "name": "DeploymentId",
+            "description": "Identifier of the LTI 1.3 Advantage deployment the link belongs to. Null for LTI 1.1 links. Field can be null.",
+            "type": "uniqueidentifier",
+            "size": "36",
+            "isPrimary": false,
+            "isForeign": true,
+            "canBeNull": true,
+            "versionHistory": "override 2026-10-26 - added from the extract header"
+        },
+        {
+            "name": "LinkSubType",
+            "description": "Sub-type of the LTI 1.3 link (values 1-4 observed in the extract). Null for LTI 1.1 links. Field can be null.",
+            "type": "int",
+            "size": "4",
+            "isPrimary": false,
+            "isForeign": false,
+            "canBeNull": true,
+            "versionHistory": "override 2026-10-26 - added from the extract header"
+        }
+    ]
+}
